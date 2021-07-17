@@ -238,7 +238,7 @@ input[type=submit]:hover {
   background-color: #cda65e;
 }
 
-input {
+#butt {
 -webkit-appearance: none;
 -moz-appearance: none;
 appearance: none;

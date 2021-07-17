@@ -20,7 +20,7 @@
 
   <div class="grid-container">
     <div class="form-container">
-      <form id="test-form">
+      <form action="welcome.php" method="post">
 
           <! Logo/headerImage ––>
           <div class="item1">
@@ -54,9 +54,8 @@
           <! –– Name ––>
           <div class="item4">
             <p class="label">Name (if given)</p>
-            <input type="text" id="fname" name="fname" class="shortText">
+            <input type="text" id="name" name="name" class="shortText">
           </div>
-
 
           <! –– Address ––>
           <div class="item5">
@@ -68,7 +67,7 @@
           <! –– Length of Residence ––>
           <div class="item6">
             <p class="label">1|How long have you lived in this neighborhood? </p>
-            <input type="text" id="resLength" name="resLength" class="shortText">
+            <input type="text" id="length" name="length" class="shortText">
           </div>
 
 
@@ -76,7 +75,7 @@
           <div class="item7">
             <p class="label">2 | How would you describe this neighborhood to someone who doesn’t know about it? What are some of the best things about
               this place?</p>
-              <input type="text" id="neighDescript" name="neighDescript" class="medText">
+              <input type="text" id="description" name="description" class="medText">
           </div>
 
 
@@ -84,27 +83,27 @@
           <div class="item8">
             <p class="label">3 | From your perspective, what are the needs that you, a neighbor, or this part of the city needs? What is broken or not
               as good as it could be here?</p>
-              <input type="text" id="neighNeeds" name="neighNeeds" class="medText">
+              <input type="text" id="needs" name="needs" class="medText">
           </div>
 
 
           <! –– Ways to Help ––>
           <div class="item9">
             <p class="label">4 | Are there any ways you think a church or nonprofit could help?</p>
-            <input type="text" id="neighHelp" name="neighHelp" class="medText">
+            <input type="text" id="help" name="help" class="medText">
           </div>
 
 
           <! Prayer ––>
           <div class="item10">
             <p class="label">Please include whether or not they received prayer/ any prayer requests given + any other info from the conversation </p>
-            <input type="text" id="pray" name="pray" class="medText">
+            <input type="text" id="prayer" name="prayer" class="medText">
           </div>
 
 
           <! Submit Button ––>
           <div class="item11">
-              <input type="submit" value="Submit">
+              <input type="submit" name="formSubmit" value="Submit">
           </div>
         </form>
 

@@ -237,3 +237,9 @@ input[type=submit] {
 input[type=submit]:hover {
   background-color: #cda65e;
 }
+
+input {
+-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
+}

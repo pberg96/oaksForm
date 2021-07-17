@@ -7,1824 +7,232 @@ html, body {
 
 body {
   font-family: 'Bitter',serif;
-}
-h1{
-  margin-top: 40px;
-  margin-bottom: 40px;
-  font-weight: 100;
-}
-p{
-  margin-top: 0px;
-  margin-bottom: 5px;
-}
-h3{
-  margin-bottom: 8px;
-  margin-top: 0px;
+  background-color: lightgrey;
 }
 
-a:link {
-  text-decoration: underline;
-  color: black;
+form{
+    margin:0px;
+    padding:0px;
+    display: grid;
 }
 
-a:visited {
-  text-decoration: underline;
-  color: black;
+.shortText {
+  width: 20%m;
+  padding: 12px 20px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 0;
 }
 
-a:hover {
-  color: #16c0f7;
+.medText {
+  width: 100%;
+  padding: 12px 20px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 0;
 }
 
-a:active {
-  color: #16c0f7;
+.label{
+  margin-bottom: 10px;
 }
 
-.bannerCon {
+.grid-container {
   display: grid;
-  grid-template-columns: 1fr .05fr;
-  grid-template-rows: .3fr 1fr .2fr;
-
-
-  position: sticky;
-  top: 0;
-
-  background-color: #16c1f7;
-  border-bottom: 2px solid #ddd;
-
-  font-family: 'Montserrat';
-  font-weight: 500;
-  font-size: 18px;
-  text-align: center;
+  grid-template-columns: auto;
+  grid-template-rows: 10px auto 50px;
 }
 
-
-.bannerItem1{
+.form-container{
   grid-column-start: 1;
-  grid-column-end: 3;
+  grid-column-end: 1;
   grid-row-start: 2;
   grid-row-end: 2;
-}
 
-.bannerItem1 img{
-  width:auto;
-  height: 1em;
-  padding-right: 10px;
-}
-
-.bannerItem1 p{
-  padding-left: 20px;
-  padding-right: 40px;
-}
-
-.bannerItem2{
-  grid-column-start: 2;
-  grid-column-end: 2;
-  grid-row-start: 1;
-  grid-row-end: 5;
+  margin-left: 10px;
+  margin-right: 10px;
 
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-
-  cursor: pointer;
-  height: 100%;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto auto;
 }
 
-.spanItem{
+.item1, .item3, .item4, .item5, .item6, .item7, .item8, .item9, .item10, .item11{ /* I TOOK OUT ITEM 2 SO THE PADDING WOULDN'T INHIBIT THE COLOR BAR */
+  text-align: left;                                                               /* THE VALUES ARE DECLARED FOR THE CONTENT IN ITEM2 IN ITS OWN CONTAINER BELOW */
+  padding-left: 30px;
+  padding-right: 30px;
+
+  background-color: white;
+}
+
+.item3, .item4, .item5, .item6, .item7, .item8, .item9, .item10, .item11{ /* SPACES OUT THE LABELS IN THE FORM */
+  padding-bottom: 30px;
+}
+
+/* -----Logo/headerImage----- */
+.item1{
   grid-column-start: 2;
   grid-column-end: 2;
-  grid-row-start: 2;
-  grid-row-end: 2;
-}
-
-.bannerCon:hover {background-color: #13a8d7;}
-
-.bannerItem2:hover {background: #0e617c;}
-
-/*<editor-fold -----NAV BAR (0)-----*/
-.item1{ /*NAV BAR*/
-  grid-column: auto;
   grid-row-start: 1;
   grid-row-end: 1;
 
-  background-color: white;
-  width: 100vw;
-  position: fixed;
-
-  border-bottom : 1px solid #ddd;
+  margin-bottom: 10px;
 }
 
-.navBox{
-  display: grid;
-  grid-template-columns: 30px 90px 200px 1fr 50px 140px;
-  grid-template-rows: 6px 1fr 6px;
+.item1 img{
+  max-width: 15em;
+  height: auto;
+
+  display: block;
+margin-left: auto;
+margin-right: auto;
 }
 
-.navItem1{ /*COMPANY NAME*/
-  grid-column-start: 3;
-  grid-column-end: 3;
-  grid-row-start: 2;
-  grid-row-end: 2;
-
-  align-self: center;
-}
-
-.navItem1 p{
-  margin: 2px 0px 0px 5px;
-  padding: 0px 0px 0px 0px;
-
-  font-family: 'Montserrat';
-  font-weight: 200;
-  font-size: 18px;
-}
-
-.navItem3{
-  grid-column-start: 4;
-  grid-column-end: 4;
-  grid-row-start: 2;
-  grid-row-end: 2;
-}
-
-.navBox > img {
+/* -----Form Title----- */
+.item2{
   grid-column-start: 2;
   grid-column-end: 2;
   grid-row-start: 2;
   grid-row-end: 2;
 
-  max-width: 81px;
-  height: auto;
+  margin-bottom: 2px;
+
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 20px auto;
+
 }
 
-.navItem4{
-  grid-column-start: 6;
-  grid-column-end: 6;
+.item2ColorBar{
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 1;
+  grid-row-end: 1;
+
+  background-color: #cda65e;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.item2Content{
+  grid-column-start: 1;
+  grid-column-end: 1;
   grid-row-start: 2;
   grid-row-end: 2;
 
-  align-self: center;
-  text-align: right;
+  text-align: left;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  background-color: white;
+
 }
 
-.navItem4 p{
-  margin: 2px 0px 0px 5px;
-  padding-right: 50px;
-
-  font-family: 'Montserrat';
-  font-weight: 200;
-  font-size: 18px;
+hr{
+  border-top: 1px solid lightgrey;
 }
 
-.navItem5{
-  grid-column-start: 5;
-  grid-column-end: 5;
-  grid-row-start: 2;
-  grid-row-end: 2;
+/* -----Introduction----- */
+.item3{
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 3;
+  grid-row-end: 3;
 
-  align-self: center;
 }
 
-.navItem5 img{
-  width:auto;
-  height: 1.1em;
-  float: right;
-  padding-top: 5px;
-}
-/*</editor-fold> */
+/* -----Name----- */
+.item4{
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 4;
+  grid-row-end: 4;
 
-/* Extra small devices (phones, 700px and down) */
-@media only screen and (max-width: 610px) {
-
-  /*<editor-fold -----BANNER (1)-----*/
-  .bannerCon {
-    display: grid;
-    grid-template-columns: 1fr 9%;
-    grid-template-rows: .3fr 1fr .2fr;
-  }
-    /*</editor-fold> */
-
-    p{
-      font-size: 17px;
-    }
-    h3{
-      font-size: 20px;
-    }
-    h1{
-      font-size: 32px;
-    }
-
-  .grid-container {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 55px 375px auto auto auto auto 50px;
-  }
-
-  /*<editor-fold -----NAV BAR (1)-----*/
-  .item1{ /*NAV BAR*/
-    grid-column: auto;
-    grid-row-start: 1;
-    grid-row-end: 1;
-
-    background-color: white;
-    width: 100vw;
-    position: fixed;
-  }
-
-  .navBox{
-    display: grid;
-    grid-template-columns: 10px 90px 120px 1fr 50px 79px;
-    grid-template-rows: 6px 1fr 6px;
-  }
-
-  .navItem1{ /*COMPANY NAME*/
-    grid-column-start: 3;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 2;
-
-    align-self: center;
-  }
-
-  .navItem1 p{
-    margin: 2px 0px 0px 5px;
-    padding: 0px 0px 0px 0px;
-
-    font-family: 'Montserrat';
-    font-weight: 200;
-    font-size: 14.4px;
-  }
-
-  .navItem3{
-    grid-column-start: 4;
-    grid-column-end: 4;
-    grid-row-start: 2;
-    grid-row-end: 2;
-  }
-
-  .navBox > img {
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 2;
-    grid-row-end: 2;
-
-    max-width: 81px;
-    height: auto;
-  }
-
-  .navItem4{
-    grid-column-start: 6;
-    grid-column-end: 6;
-    grid-row-start: 2;
-    grid-row-end: 2;
-
-    align-self: center;
-    text-align: right;
-  }
-
-  .navItem4 p{
-    margin: 2px 0px 0px 5px;
-    padding-right: 10px;
-
-    font-family: 'Montserrat';
-    font-weight: 200;
-    font-size: 14.4px;
-  }
-
-  .navItem5{
-    grid-column-start: 5;
-    grid-column-end: 5;
-    grid-row-start: 2;
-    grid-row-end: 2;
-
-    align-self: center;
-  }
-
-  .navItem5 img{
-    width:auto;
-    height: 1.1em;
-    float: right;
-    padding-top: 5px;
-  }
-  /*</editor-fold> */
-
-  /*<editor-fold -----HEADER (1)-----*/
-  .item2{ /*HEADER*/
-    grid-column-start: 1;
-    grid-column-end: 6;
-    grid-row-start: 2;
-    grid-row-end: 2;
-
-    background-image: url("images/kidSwimming.jpg");
-    background-size:cover;
-    background-position: center;
-  }
-
-  .headBox{
-    display: grid;
-    grid-template-columns: 10% auto auto auto 10%;
-    grid-template-rows: 100px auto auto 100px;
-    text-align: center;
-    color: white;
-  }
-
-  .headItem1{ /*S&C POOLS*/
-    grid-column-start: 3;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 2;
-  }
-
-  .headItem1 p{
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 900;
-    font-size: 50px;
-    margin: 0px 0px 0px 0px;
-    padding: 0px 0px 0px 0px;
-    display: inline-block;
-    line-height: 1;
-  }
-
-  .headItem2 p{
-    font-family: 'Montserrat';
-    font-weight: 800;
-    font-size: 20px;
-    margin: 30px 0px 0px 0px;
-    display: inline-block;
-  }
-
-  .headItem2{  /*Swimming Pool Contractors*/
-    grid-column-start: 3;
-    grid-column-end: 3;
-    grid-row-start: 3;
-    grid-row-end: 3;
-  }
-  /*</editor-fold> */
-
-  /*<editor-fold -----ABOUT (1)-----*/
-  .item3{ /*ABOUT*/
-    grid-column-start: 1;
-    grid-column-end: 6;
-    grid-row-start: 3;
-    grid-row-end: 3;
-
-    background-color: white;
-  }
-
-  .aboutBox{
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: 40px auto 40px auto 40px auto 40px;
-    column-gap: 25px;
-
-    text-align: center;
-  }
-
-  .aboutBox p{
-    line-height: 1.5;
-  }
-
-  .aboutItem1{ /*LOGO*/
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 2;
-    grid-row-end: 2;
-  }
-
-  .aboutItem1 img{
-    max-width: 15em;
-    height: auto;
-    margin-top: 0.83em;
-  }
-
-  .aboutTitle{
-    display: block;
-    font-size: 28px;
-    margin-top: 0.83em;
-    margin-bottom: 0.83em;
-    margin-left: 0;
-    margin-right: 0;
-    font-weight: 900;
-  }
-
-  .aboutItem2{ /*HISTORY*/
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 4;
-    grid-row-end: 4;
-  }
-
-  .aboutItem3{ /*PRESENT*/
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 6;
-    grid-row-end: 6;
-  }
-
-  /*</editor-fold> */
-
-  /*<editor-fold -----PICTURES (1)-----*/
-  .item4{ /*PICTURES*/
-    grid-column-start: 1;
-    grid-column-end: 6;
-    grid-row-start: 4;
-    grid-row-end: 4;
-
-    background-color: white;
-  }
-
-  .picBox{
-    display: grid;
-    grid-template-columns: 15px auto 15px auto 15px;
-    grid-template-rows: 15px auto 15px auto 40px;
-
-    justify-content: center;
-  }
-
-  .picItem1{
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 2;
-    grid-row-end: 2;
-  }
-
-  .picItem2{
-    grid-column-start: 4;
-    grid-column-end: 4;
-    grid-row-start: 2;
-    grid-row-end: 2;
-  }
-
-  .picItem3{
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 4;
-    grid-row-end: 4;
-  }
-
-  .picItem4{
-    display: inherit;
-    grid-column-start: 4;
-    grid-column-end: 4;
-    grid-row-start: 4;
-    grid-row-end: 4;
-  }
-
-  .picBox img {
-    max-width: 100%;
-    height: auto;
-  }
-  /*</editor-fold> */
-
-  /*<editor-fold -----SERVICES (1)-----*/
-  .item5{ /*SERVICES*/
-    grid-column-start: 1;
-    grid-column-end: 6;
-    grid-row-start: 5;
-    grid-row-end: 5;
-
-    background-color: #3A3B3C;
-  }
-
-  .servBox{
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: 30px auto 10px auto auto auto auto auto auto auto auto auto 60px;
-    column-gap: 20px;
-    color: white;
-  }
-  #topServ {
-    margin-top: 0px;
-  }
-
-  .servBox h3{
-    margin-top: 35px;
-  }
-
-  .servBox a:link {
-    text-decoration: underline;
-    color: white;
-  }
-
-  .servBox a:visited {
-    text-decoration: underline;
-    color: white;
-  }
-
-  .servBox a:hover {
-    color: #16c0f7;
-  }
-
-  .servBox a:active {
-    color: #16c0f7;
-  }
-
-
-  .servItem1{
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 2;
-    grid-row-end: 2;
-    text-align: center;
-  }
-  .servItem2{
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 4;
-    grid-row-end: 4;
-  }
-  .servItem3{
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 5;
-    grid-row-end: 5;
-  }
-  .servItem4{
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 6;
-    grid-row-end: 6;
-  }
-  .servItem5{
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 7;
-    grid-row-end: 7;
-  }
-  .servItem6{
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 8;
-    grid-row-end: 8;
-  }
-  .servItem7{
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 9;
-    grid-row-end: 9;
-  }
-  .servItem8{
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 10;
-    grid-row-end: 10;
-  }
-  .servItem9{
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 11;
-    grid-row-end: 11;
-  }
-  /*</editor-fold> */
-
-  /*<editor-fold -----CONTACT US (1)-----*/
-  .item6{ /*CONTACT US*/
-    grid-column-start: 1;
-    grid-column-end: 6;
-    grid-row-start: 6;
-    grid-row-end: 6;
-
-    background-color: white;
-  }
-
-  .conBox{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 30px auto 10px auto 40px auto auto 40px;
-
-    text-align:center;
-  }
-
-  .conBox p{
-    font-size: 13px;
-  }
-
-  .conBox h3{
-    font-size: 15px;
-  }
-
-  .conItem1{
-    grid-column-start: 1;
-    grid-column-end: 6;
-    grid-row-start: 2;
-    grid-row-end: 2;
-  }
-  .conItem2{
-    grid-column-start: 1;
-    grid-column-end: 6;
-    grid-row-start: 4;
-    grid-row-end: 4;
-  }
-  .conItem3{ /*Phone*/
-    grid-column-start: 1;
-    grid-column-end: 1;
-    grid-row-start: 6;
-    grid-row-end: 6;
-  }
-  .conItem4{ /*Email*/
-    grid-column-start: 1;
-    grid-column-end: 1;
-    grid-row-start: 6;
-    grid-row-end: 6;
-    margin-top: 60px;
-  }
-  .conItem5{ /*Hours*/
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 6;
-    grid-row-end: 6;
-  }
-  .conItem5 p{
-    text-align: left;
-    padding-left: 25px;
-    line-height: 1.8;
-  }
-  .hours{
-    width: 180px;
-  }
-  .map {
-    height: 250px;
-    /* The height is 400 pixels */
-    width: 100%;
-    /* The width is the width of the web page */
-  }
-  /*</editor-fold> */
-
-  /*<editor-fold -----FOOTER (1)-----*/
-  .item7{ /*FOOTER*/
-    grid-column-start: 1;
-    grid-column-end: 6;
-    grid-row-start: 7;
-    grid-row-end: 7;
-
-    background-color: #3A3B3C;
-
-  }
-
-  .footBox{
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 80px auto;
-
-    color: white;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .footItem1{
-    grid-column-start: 1;
-    grid-column-end: 1;
-    grid-row-start: 2;
-    grid-row-end: 2;
-  }
-  /*</editor-fold> */
 }
 
-/* Medium-Small devices (tablets, 700px and up) */
-@media only screen and (min-width: 610px){
-  .grid-container {
-    display: grid;
-    grid-template-columns: 10% auto 10%;
-    grid-template-rows: 55px 375px auto auto auto auto 50px;
-  }
+/* -----Address----- */
+.item5{
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 5;
+  grid-row-end: 5;
 
-/*Brought these two down to adjust logo/call margins*/
-  .navBox{
-    display: grid;
-    grid-template-columns: 10px 90px 200px 1fr 50px 95px;
-    grid-template-rows: 6px 1fr 6px;
-  }
-  .navItem4 p{
-    margin: 2px 0px 0px 5px;
-    padding-right: 10px;
-
-    font-family: 'Montserrat';
-    font-weight: 200;
-    font-size: 18px;
-  }
-
-  /*<editor-fold -----HEADER (2)-----*/
-  .item2{ /*HEADER*/
-    grid-column-start: 1;
-    grid-column-end: 6;
-    grid-row-start: 2;
-    grid-row-end: 2;
-
-    background-image: url("images/kidSwimming.jpg");
-    background-size:cover;
-    background-position: center;
-  }
-
-  .headBox{
-    display: grid;
-    grid-template-columns: 10% auto auto auto 10%;
-    grid-template-rows: 100px auto auto 100px;
-    text-align: center;
-    color: white;
-  }
-
-  .headItem1{ /*S&C POOLS*/
-    grid-column-start: 3;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 2;
-  }
-
-  .headItem1 p{
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 900;
-    font-size: 75px;
-    margin: 0px 0px 0px 0px;
-    padding: 0px 0px 0px 0px;
-    display: inline-block;
-    line-height: 1;
-  }
-
-  .headItem2 p{
-    font-family: 'Montserrat';
-    font-weight: 800;
-    font-size: 25px;
-    margin: 30px 0px 0px 0px;
-    display: inline-block;
-  }
-
-  .headItem2{  /*Swimming Pool Contractors*/
-    grid-column-start: 3;
-    grid-column-end: 3;
-    grid-row-start: 3;
-    grid-row-end: 3;
-    font-size: 20px;
-  }
-
-  /*</editor-fold> */
-
-  /*<editor-fold -----ABOUT (2)-----*/
-  .item3{ /*ABOUT*/
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 3;
-    grid-row-end: 3;
-
-    background-color: white;
-  }
-
-  .aboutBox{
-    display: grid;
-    grid-template-columns: 1fr .1fr 1fr ;
-    grid-template-rows: 40px auto 20px auto 20px auto 10px;
-
-    text-align: center;
-  }
-
-  .aboutBox p{
-    line-height: 1.5;
-  }
-
-  .aboutItem1{ /*LOGO*/
-    grid-column-start: 1;
-    grid-column-end: 7;
-    grid-row-start: 2;
-    grid-row-end: 2;
-  }
-
-  .aboutItem1 img{
-    max-width: 15em;
-    height: auto;
-    margin-top: 0.83em;
-  }
-
-  .aboutTitle{
-    display: block;
-    font-size: 1.5em;
-    margin-top: 0.83em;
-    margin-bottom: 0.83em;
-    margin-left: 0;
-    margin-right: 0;
-    font-weight: 900;
-  }
-
-  .aboutItem2{ /*HISTORY*/
-    grid-column-start: 1;
-    grid-column-end: 1;
-    grid-row-start: 4;
-    grid-row-end: 4;
-  }
-
-  .aboutItem3{ /*PRESENT*/
-    grid-column-start: 3;
-    grid-column-end: 3;
-    grid-row-start: 4;
-    grid-row-end: 4;
-  }
-
-  /*</editor-fold> */
-
-  /*<editor-fold ----PICTURES (2)----*/
-  .item4{ /*PICTURES*/
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 4;
-    grid-row-end: 4;
-
-    background-color: white;
-  }
-
-  .picBox{
-    display: grid;
-    grid-template-columns: 10fr .5fr 10fr .5fr 10fr;
-    grid-template-rows: 10px auto 40px;
-
-    justify-content: center;
-  }
-
-  .picItem1{
-    grid-column-start: 1;
-    grid-column-end: 1;
-    grid-row-start: 2;
-    grid-row-end: 2;
-  }
-
-  .picItem2{
-    grid-column-start: 3;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 2;
-  }
-
-  .picItem3{
-    grid-column-start: 5;
-    grid-column-end: 5;
-    grid-row-start: 2;
-    grid-row-end: 2;
-  }
-
-  .picItem4{
-    display: none;
-  }
-
-  .picBox img {
-    max-width: 100%;
-    height: auto;
-  }
-  /*</editor-fold> */
-
-  /*<editor-fold -----SERVICES (2)-----*/
-  .item5{ /*SERVICES*/
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 5;
-    grid-row-end: 5;
-
-    background-color: #3A3B3C;
-  }
-
-  .row1{ /*complete row color*/
-    grid-column-start: 1;
-    grid-column-end: 5;
-    grid-row-start: 5;
-    grid-row-end: 5;
-
-    background-color: #3A3B3C;
-  }
-
-  .servBox{
-    display: grid;
-    grid-template-columns: .1fr 1fr .1fr;
-    grid-template-rows: 2em auto auto auto auto auto auto auto auto auto auto 3.3em;
-
-    color: white;
-  }
-
-  .servBox a:link {
-    text-decoration: underline;
-    color: white;
-  }
-
-  .servBox a:visited {
-    text-decoration: underline;
-    color: white;
-  }
-
-  .servBox a:hover {
-    color: #16c0f7;
-  }
-
-  .servBox a:active {
-    color: #16c0f7;
-  }
-
-  .servBox h3{
-    margin-top: 30px;
-  }
-
-  .servItem1{
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 2;
-    grid-row-end: 2;
-    text-align: center;
-  }
-  .servItem2{
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 3;
-    grid-row-end: 3;
-  }
-  .servItem3{
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 4;
-    grid-row-end: 4;
-  }
-  .servItem4{
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 5;
-    grid-row-end: 5;
-  }
-  .servItem5{
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 6;
-    grid-row-end: 6;
-  }
-  .servItem6{
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 7;
-    grid-row-end: 7;
-  }
-  .servItem7{
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 8;
-    grid-row-end: 8;
-  }
-  .servItem8{
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 9;
-    grid-row-end: 9;
-  }
-  .servItem9{
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 10;
-    grid-row-end: 10;
-  }
-/*</editor-fold> */
-
-  /*<editor-fold -----CONTACT US (2)-----*/
-  .item6{ /*CONTACT US*/
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 6;
-    grid-row-end: 6;
-
-    background-color: white;
-  }
-
-  .conBox{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr ;
-    grid-template-rows: 40px auto auto 40px auto 40px;
-
-    text-align:center;
-  }
-
-  .conItem1{
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 2;
-    grid-row-end: 2;
-  }
-  .conItem2{
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 3;
-    grid-row-end: 3;
-  }
-  .conItem3{/*phone*/
-    grid-column-start: 1;
-    grid-column-end: 1;
-    grid-row-start: 5;
-    grid-row-end: 5;
-  }
-  .conItem4{/*email*/
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 5;
-    grid-row-end: 5;
-  }
-  .conItem5{ /*store hours*/
-    grid-column-start: 3;
-    grid-column-end: 3;
-    grid-row-start: 5;
-    grid-row-end: 5;
-  }
-  .conItem5 p{
-    text-align: left;
-    padding-left: 5px;
-    line-height: 1.2;
-  }
-
-  .hours{
-    width: 180px;
-  }
-  .map {
-    height: 400px;
-    width: 100%;
-  }
-  /*</editor-fold> */
-
-  /*<editor-fold -----FOOTER (2)-----*/
-  .item7{ /*FOOTER*/
-    grid-column-start: 1;
-    grid-column-end: 6;
-    grid-row-start: 7;
-    grid-row-end: 7;
-
-    background-color: #3A3B3C;
-
-  }
-  .footBox{
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 80px auto;
-
-    color: white;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .footItem1{
-    grid-column-start: 1;
-    grid-column-end: 1;
-    grid-row-start: 2;
-    grid-row-end: 2;
-  }
-  /*</editor-fold> */
 }
 
-/* Medium-Large devices (laptops/desktops, 1000px and up) */
-@media only screen and (min-width: 1000px) {
-  .grid-container {
-    display: grid;
-    grid-template-columns: 10% auto 10% ;
-    grid-template-rows: 55px 375px auto auto auto auto 50px;
-  }
+/* -----Length of Residence----- */
+.item6{
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 6;
+  grid-row-end: 6;
 
-  /*Brought these two down to return logo/call margins*/
-    .navBox{
-      display: grid;
-      grid-template-columns: 30px 90px 200px 1fr 50px 135px;
-      grid-template-rows: 6px 1fr 6px;
-    }
-    .navItem4 p{
-      margin: 2px 0px 0px 5px;
-      padding-right: 50px;
-
-      font-family: 'Montserrat';
-      font-weight: 200;
-      font-size: 18px;
-    }
-
-  /*<editor-fold -----HEADER (3)----- */
-  .item2{ /*HEADER*/
-    grid-column-start: 1;
-    grid-column-end: 6;
-    grid-row-start: 2;
-    grid-row-end: 2;
-
-    background-image: url("images/kidSwimming.jpg");
-    background-size:cover;
-    background-position: center;
-  }
-
-  .headBox{
-    display: grid;
-    grid-template-columns: 10% auto auto auto 10%;
-    grid-template-rows: 100px auto auto 100px;
-    text-align: center;
-    color: white;
-  }
-
-  .headItem1{ /*S&C POOLS*/
-    grid-column-start: 3;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 2;
-  }
-
-  .headItem1 p{
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 900;
-    font-size: 75px;
-    margin: 0px 0px 0px 0px;
-    padding: 0px 0px 0px 0px;
-    display: inline-block;
-    line-height: 1;
-  }
-
-  .headItem2 p{
-    font-family: 'Montserrat';
-    font-weight: 800;
-    font-size: 25px;
-    margin: 30px 0px 0px 0px;
-    display: inline-block;
-  }
-
-  .headItem2{  /*Swimming Pool Contractors*/
-    grid-column-start: 3;
-    grid-column-end: 3;
-    grid-row-start: 3;
-    grid-row-end: 3;
-    font-size: 20px;
-  }
-  /*</editor-fold> */
-
-  /*<editor-fold -----ABOUT (3)-----*/
-  .item3{ /*ABOUT*/
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 3;
-    grid-row-end: 3;
-
-    background-color: white;
-  }
-
-  .aboutBox{
-    display: grid;
-    grid-template-columns: .5fr 1fr 1fr;
-    grid-template-rows: 40px auto 15px;
-    column-gap: 25px;
-
-    text-align: center;
-  }
-
-  .aboutBox p{
-    line-height: 1.5;
-  }
-
-  .aboutItem1{ /*LOGO*/
-    grid-column-start: 1;
-    grid-column-end: 1;
-    grid-row-start: 2;
-    grid-row-end: 2;
-  }
-
-  .aboutItem1 img{
-    max-width: 15em;
-    height: auto;
-    margin-top: 1.5em;
-  }
-
-  .aboutTitle{
-    display: block;
-    font-size: 1.5em;
-    margin-top: 0.83em;
-    margin-bottom: 0.83em;
-    margin-left: 0;
-    margin-right: 0;
-    font-weight: 900;
-  }
-
-  .aboutItem2{ /*HISTORY*/
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 2;
-    grid-row-end: 2;
-  }
-
-  .aboutItem3{ /*PRESENT*/
-    grid-column-start: 3;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 2;
-  }
-
-  /*</editor-fold> */
-
-  /*<editor-fold -----PICTURES (3)-----*/
-  .item4{ /*PICTURES*/
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 4;
-    grid-row-end: 4;
-
-    background-color: white;
-  }
-
-  .picBox{
-    display: grid;
-    grid-template-columns: 10fr .5fr 10fr .5fr 10fr .5fr 10fr;
-    grid-template-rows: 15px auto 40px;
-
-    justify-content: center;
-  }
-
-  .picItem1{
-    grid-column-start: 1;
-    grid-column-end: 1;
-    grid-row-start: 2;
-    grid-row-end: 2;
-  }
-
-  .picItem2{
-    grid-column-start: 3;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 2;
-  }
-
-  .picItem3{
-    grid-column-start: 5;
-    grid-column-end: 5;
-    grid-row-start: 2;
-    grid-row-end: 2;
-  }
-
-  .picItem4{
-    display: inherit;
-    grid-column-start: 7;
-    grid-column-end: 7;
-    grid-row-start: 2;
-    grid-row-end: 2;
-  }
-
-  .picBox img {
-    max-width: 100%;
-    height: auto;
-  }
-  /*</editor-fold> */
-
-  /*<editor-fold -----SERVICES (3)-----*/
-  .item5{ /*SERVICES*/
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 5;
-    grid-row-end: 5;
-
-    background-color: #3A3B3C;
-  }
-
-  .row1{ /*complete row color*/
-    grid-column-start: 1;
-    grid-column-end: 5;
-    grid-row-start: 5;
-    grid-row-end: 5;
-
-    background-color: #3A3B3C;
-  }
-
-  .servBox{
-    display: grid;
-    grid-template-columns: .08fr 1fr .15fr 1fr;
-    grid-template-rows: 2em auto auto auto auto auto 3.3em;
-    color: white;
-  }
-
-  .servBox h3{
-    margin-top: 30px;
-  }
-
-  .servBox a:link {
-    text-decoration: underline;
-    color: white;
-  }
-
-  .servBox a:visited {
-    text-decoration: underline;
-    color: white;
-  }
-
-  .servBox a:hover {
-    color: #16c0f7;
-  }
-
-  .servBox a:active {
-    color: #16c0f7;
-  }
-
-  .servItem1{
-    grid-column-start: 1;
-    grid-column-end: 5;
-    grid-row-start: 2;
-    grid-row-end: 2;
-    text-align: center;
-  }
-  .servItem2{
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 3;
-    grid-row-end: 3;
-  }
-  .servItem3{
-    grid-column-start: 4;
-    grid-column-end: 4;
-    grid-row-start: 6;
-    grid-row-end: 6;
-  }
-  .servItem4{
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 4;
-    grid-row-end: 4;
-  }
-  .servItem5{
-    grid-column-start: 4;
-    grid-column-end: 4;
-    grid-row-start: 4;
-    grid-row-end: 4;
-  }
-  .servItem6{
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 5;
-    grid-row-end: 5;
-  }
-  .servItem7{
-    grid-column-start: 4;
-    grid-column-end: 4;
-    grid-row-start: 5;
-    grid-row-end: 5;
-  }
-  .servItem8{
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 6;
-    grid-row-end: 6;
-  }
-  .servItem9{
-    grid-column-start: 4;
-    grid-column-end: 4;
-    grid-row-start: 3;
-    grid-row-end: 3;
-  }
-  /*</editor-fold> */
-
-  /*<editor-fold -----CONTACT US (3)----- */
-  .item6{ /*CONTACT US*/
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 6;
-    grid-row-end: 6;
-
-    background-color: white;
-  }
-
-  .conBox{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 40px auto auto 40px auto 40px;
-
-    text-align:center;
-  }
-
-  .conItem1{
-    grid-column-start: 1;
-    grid-column-end: 6;
-    grid-row-start: 2;
-    grid-row-end: 2;
-  }
-  .conItem2{
-    grid-column-start: 1;
-    grid-column-end: 6;
-    grid-row-start: 3;
-    grid-row-end: 3;
-  }
-  .conItem3{
-    grid-column-start: 1;
-    grid-column-end: 1;
-    grid-row-start: 5;
-    grid-row-end: 5;
-  }
-  .conItem4{
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 5;
-    grid-row-end: 5;
-    margin-left: 5px;
-  }
-  .conItem5{
-    grid-column-start: 3;
-    grid-column-end: 3;
-    grid-row-start: 5;
-    grid-row-end: 5;
-  }
-  .conItem5 p{
-    text-align: left;
-    padding-left: 5px;
-    line-height: 1.2;
-  }
-
-  .map {
-    height: 400px;
-    width: 100%;
-  }
-  /*</editor-fold> */
-
-  /*<editor-fold -----FOOTER (3)-----*/
-  .item7{ /*FOOTER*/
-    grid-column-start: 1;
-    grid-column-end: 6;
-    grid-row-start: 7;
-    grid-row-end: 7;
-
-    background-color: #3A3B3C;
-
-  }
-  .footBox{
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 80px auto;
-
-    color: white;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .footItem1{
-    grid-column-start: 1;
-    grid-column-end: 1;
-    grid-row-start: 2;
-    grid-row-end: 2;
-  }
-  /*</editor-fold> */
 }
 
-/* Large devices (laptops/desktops, 1270px and up) */
-@media only screen and (min-width: 1270px) {
-  .grid-container {
-    display: grid;
-    grid-template-columns: 14% auto 14%;
-    grid-template-rows: 55px 375px auto auto auto auto 50px;
-  }
+/* -----Neighborhood Description----- */
+.item7{
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 7;
+  grid-row-end: 7;
 
-  /*<editor-fold -----HEADER (4)-----*/
-  .item2{ /*HEADER*/
-    grid-column-start: 1;
-    grid-column-end: 6;
-    grid-row-start: 2;
-    grid-row-end: 2;
-
-    background-image: url("images/kidSwimming.jpg");
-    background-size:cover;
-    background-position: center;
-  }
-
-  .headBox{
-    display: grid;
-    grid-template-columns: 10% auto auto auto 10%;
-    grid-template-rows: 100px auto auto 100px;
-    text-align: center;
-    color: white;
-  }
-
-  .headItem1{ /*S&C POOLS*/
-    grid-column-start: 3;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 2;
-  }
-
-  .headItem1 p{
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 900;
-    font-size: 75px;
-    margin: 0px 0px 0px 0px;
-    padding: 0px 0px 0px 0px;
-    display: inline-block;
-    line-height: 1;
-  }
-
-  .headItem2 p{
-    font-family: 'Montserrat';
-    font-weight: 800;
-    font-size: 25px;
-    margin: 30px 0px 0px 0px;
-    display: inline-block;
-  }
-
-  .headItem2{  /*Swimming Pool Contractors*/
-    grid-column-start: 3;
-    grid-column-end: 3;
-    grid-row-start: 3;
-    grid-row-end: 3;
-    font-size: 20px;
-  }
-  /*</editor-fold> */
-
-  /*<editor-fold -----ABOUT (4)-----*/
-  .item3{ /*ABOUT*/
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 3;
-    grid-row-end: 3;
-
-    background-color: white;
-  }
-
-  .aboutBox{
-    display: grid;
-    grid-template-columns: .5fr 1fr 1fr;
-    grid-template-rows: 40px auto 15px;
-    column-gap: 25px;
-
-    text-align: center;
-  }
-
-  .aboutBox p{
-    line-height: 1.5;
-    margin-left: 10%;
-  }
-
-  .aboutItem1{ /*LOGO*/
-    grid-column-start: 1;
-    grid-column-end: 1;
-    grid-row-start: 2;
-    grid-row-end: 2;
-    float: left;
-
-  }
-
-  .aboutItem1 img{
-    max-width: 22em;
-    height: auto;
-    /*margin-top: 1.5em;*/
-  }
-
-  .aboutTitle{
-    display: block;
-    font-size: 1.5em;
-    margin-top: 0.83em;
-    margin-bottom: 0.83em;
-    margin-left: 0;
-    margin-right: 0;
-    font-weight: 900;
-  }
-
-  .aboutItem2{ /*HISTORY*/
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 2;
-    grid-row-end: 2;
-  }
-
-  .aboutItem3{ /*PRESENT*/
-    grid-column-start: 3;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 2;
-  }
-  /*</editor-fold> */
-
-  /*<editor-fold -----PICTURES (4)-----*/
-  .item4{ /*PICTURES*/
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 4;
-    grid-row-end: 4;
-
-    background-color: white;
-  }
-
-  .picBox{
-    display: grid;
-    grid-template-columns: 10fr .5fr 10fr .5fr 10fr .5fr 10fr;
-    grid-template-rows: 15px auto 40px;
-
-    justify-content: center;
-  }
-
-  .picItem1{
-    grid-column-start: 1;
-    grid-column-end: 1;
-    grid-row-start: 2;
-    grid-row-end: 2;
-  }
-
-  .picItem2{
-    grid-column-start: 3;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 2;
-  }
-
-  .picItem3{
-    grid-column-start: 5;
-    grid-column-end: 5;
-    grid-row-start: 2;
-    grid-row-end: 2;
-  }
-
-  .picItem4{
-    display: inherit;
-    grid-column-start: 7;
-    grid-column-end: 7;
-    grid-row-start: 2;
-    grid-row-end: 2;
-  }
-
-  .picBox img {
-    max-width: 100%;
-    height: auto;
-  }
-  /*</editor-fold> */
-
-  /*<editor-fold -----SERVICES (4)-----*/
-  .item5{ /*SERVICES*/
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 5;
-    grid-row-end: 5;
-
-    background-color: #3A3B3C;
-  }
-
-  .row1{ /*complete row color*/
-    grid-column-start: 1;
-    grid-column-end: 5;
-    grid-row-start: 5;
-    grid-row-end: 5;
-
-    background-color: #3A3B3C;
-  }
-
-  .servBox{
-    display: grid;
-    grid-template-columns: 1fr .1fr 1fr .1fr 1fr .1fr 1fr;
-    grid-template-rows: 2em auto auto auto 3.3em;
-    color: white;
-  }
-
-  .servBox h3{
-    margin-top: 30px;
-  }
-
-  .servBox h1{
-    text-align: center;
-  }
-  .servBox a:link {
-    text-decoration: underline;
-    color: white;
-  }
-
-  .servBox a:visited {
-    text-decoration: underline;
-    color: white;
-  }
-
-  .servBox a:hover {
-    color: #16c0f7;
-  }
-
-  .servBox a:active {
-    color: #16c0f7;
-  }
-
-
-  .servItem1{/*SERVICES*/
-    grid-column-start: 1;
-    grid-column-end: 8;
-    grid-row-start: 2;
-    grid-row-end: 2;
-  }
-  .servItem2{/*liner replacement*/
-    grid-column-start: 1;
-    grid-column-end: 1;
-    grid-row-start: 3;
-    grid-row-end: 3;
-  }
-  .servItem3{/*pool repair*/
-    grid-column-start: 3;
-    grid-column-end: 3;
-    grid-row-start: 3;
-    grid-row-end: 3;
-  }
-  .servItem4{/*salt generator*/
-    grid-column-start: 5;
-    grid-column-end: 5;
-    grid-row-start: 3;
-    grid-row-end: 3;
-  }
-  .servItem5{/*open/close*/
-    grid-column-start: 7;
-    grid-column-end: 7;
-    grid-row-start: 3;
-    grid-row-end: 3;
-  }
-  .servItem6{/*retail location*/
-    grid-column-start: 1;
-    grid-column-end: 1;
-    grid-row-start: 4;
-    grid-row-end: 4;
-  }
-  .servItem7{/*hard to find*/
-    grid-column-start: 3;
-    grid-column-end: 3;
-    grid-row-start: 4;
-    grid-row-end: 4;
-  }
-  .servItem8{/*equipment servicing*/
-    grid-column-start: 5;
-    grid-column-end: 5;
-    grid-row-start: 4;
-    grid-row-end: 4;
-  }
-  .servItem9{/*computer analysis*/
-    grid-column-start: 7;
-    grid-column-end: 7;
-    grid-row-start: 4;
-    grid-row-end: 4;
-  }
-  /*</editor-fold> */
-
-  /*<editor-fold -----CONTACT US (4)-----*/
-  .item6{ /*CONTACT US*/
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 6;
-    grid-row-end: 6;
-
-    background-color: white;
-  }
-
-  .conBox{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 40px auto auto 40px auto 40px;
-
-    text-align:center;
-  }
-
-  .conItem1{
-    grid-column-start: 1;
-    grid-column-end: 7;
-    grid-row-start: 2;
-    grid-row-end: 2;
-  }
-  .conItem2{
-    grid-column-start: 1;
-    grid-column-end: 6;
-    grid-row-start: 3;
-    grid-row-end: 3;
-  }
-  .conItem3{ /*Phone*/
-    grid-column-start: 1;
-    grid-column-end: 1;
-    grid-row-start: 5;
-    grid-row-end: 5;
-  }
-  .conItem4{ /*Email*/
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 5;
-    grid-row-end: 5;
-    margin-left: 5px;
-  }
-  .conItem5{ /*Store Hours*/
-    grid-column-start: 3;
-    grid-column-end: 3;
-    grid-row-start: 5;
-    grid-row-end: 5;
-  }
-  .conItem5 p{
-    text-align: left;
-    padding-left: 5px;
-    line-height: 1.2;
-  }
-
-  .map {
-    height: 500px;
-    width: 100%;
-  }
-  /*</editor-fold> */
-
-  /*<editor-fold -----FOOTER (4)-----*/
-  .item7{ /*FOOTER*/
-    grid-column-start: 1;
-    grid-column-end: 6;
-    grid-row-start: 7;
-    grid-row-end: 7;
-
-    background-color: #3A3B3C;
-
-  }
-  .footBox{
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 80px auto;
-
-    color: white;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .footItem1{
-    grid-column-start: 1;
-    grid-column-end: 1;
-    grid-row-start: 2;
-    grid-row-end: 2;
 }
-/*</editor-fold> */
+
+/* -----Neighborhood Needs----- */
+.item8{
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 8;
+  grid-row-end: 8;
+
+}
+
+/* -----Ways to Help----- */
+.item9{
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 9;
+  grid-row-end: 9;
+
+}
+
+/* -----Prayer----- */
+.item10{
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 10;
+  grid-row-end: 10;
+
+}
+
+/* -----Submit Button----- */
+.item11{
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 11;
+  grid-row-end: 11;
+
+  margin-top: 1px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+}
+
+input[type=submit] {
+  width: 50%;
+  background-color: #cfa14c;
+  color: white;
+  padding: 14px 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #cda65e;
 }
